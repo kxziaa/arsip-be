@@ -1,0 +1,90 @@
+//create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "nama admin",
+    "email": "emai4@gmail.com",
+    "password": "pass123",
+    "confPassword": "pass123",
+    "role": "admin"
+}
+
+###
+// get all user
+GET http://localhost:5000/users
+
+###
+//get single user
+GET http://localhost:5000/users/e13a870f-7431-403f-9224-304793661f62
+
+###
+//update
+PATCH http://localhost:5000/users/e13a870f-7431-403f-9224-304793661f62
+Content-Type: application/json
+
+{
+    "name": "nama 3",
+    "email": "email3@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "kadis"
+}
+
+###
+//delete
+delete http://localhost:5000/users/3e631035-7af1-4fa4-a115-7e958883a450
+
+### 
+// Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+
+    "email": "emai4@gmail.com",
+    "password": "pass123"
+}
+
+### 
+// Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+
+    "email": "emai@gmail.com",
+    "password": "pass123"
+}
+
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+//get all disp
+GET http://localhost:5000/disp
+
+###
+//get 1 disp
+GET http://localhost:5000/disp/805241c2-099e-44be-bc37-0ee90451ada9
+
+###
+//post disp
+POST http://localhost:5000/disp
+Content-Type: application/json
+
+{
+
+    "tujuanDisp": "kadis",
+    "catatan": "cttn",
+    "SMasukId": "1"
+}
+
+
+###
+//delete disp
+DELETE http://localhost:5000/disp/805241c2-099e-44be-bc37-0ee90451ada9
